@@ -11,18 +11,63 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
 
 <style>
+
+    /* BODY */
     body {
+        margin: 0;
         background: linear-gradient(135deg, #fff5f8, #fde2ea);
         font-family: "Poppins", Arial, sans-serif;
         min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
+    /* NAVBAR */
+    nav {
+        width: 100%;
+        background-color: #fff0f6;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-top: 3px solid #f4a6c1;
+        border-bottom: 3px solid #f4a6c1;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        box-shadow: 0 4px 10px rgba(201, 79, 124, 0.1);
+        z-index: 1000;
+    }
+
+    nav div {
+        font-weight: 700;
+        font-size: 18px;
+        color: #c94f7c;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #b84d73;
+        transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #e48aad;
+    }
+
+    /* FORM */
     form {
         background-color: #fff0f6;
         padding: 25px;
@@ -30,6 +75,8 @@
         width: 100%;
         max-width: 420px;
         box-shadow: 0 8px 20px rgba(201, 79, 124, 0.15);
+
+        margin: 130px auto 50px auto;
     }
 
     label {
@@ -39,14 +86,9 @@
         display: block;
     }
 
-    input[type="radio"] {
-        margin: 0 6px 0 10px;
-        accent-color: #f2a1c7;
-    }
-
-    select {
+    input[type="text"] {
         width: 100%;
-        margin-top: 8px;
+        margin-top: 6px;
         padding: 8px;
         border-radius: 10px;
         border: 1px solid #f4b6cf;
@@ -83,82 +125,43 @@
     }
 
     h1 {
-    text-align: center;
-    color: #c94f7c;
-    font-weight: 600;
-    margin-bottom: 15px;
+        text-align: center;
+        color: #c94f7c;
+        font-weight: 600;
+        margin-bottom: 15px;
     }
 
-    nav {
-    width: 100%;
-    background-color: #fff0f6;
-    padding: 12px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(201, 79, 124, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-nav a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #c94f7c;
-    font-size: 18px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #b84d73;
-    transition: 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #e48aad;
-}
-    
 </style>
+</head>
+
 <body>
 
-    <header>
-        <nav>
-            <div>Intramurals SY 2025-2026</div>
-            <ul class="nav-links">
-                <li><a href="https://jgrospe2425.github.io/GH_ICT10_Q3_Seatwork2_Grospe_Jillian/">Sign Up</a></li>
-                <li><a href="https://jgrospe2425.github.io/GH_ICT10_Q3SkillsTestGrospe_Jillian/">Team Checker</a></li>
-                <li><a href="https://jgrospe2425.github.io/Players/">Players</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <form>
-         <h1>Sign Up</h1>
-        <label>Username:</label>
-        <input type="text" id="user" placeholder="Please enter your username"><br>
-        <label>Password:</label>
-        <input type="text" id="pass" placeholder="Please enter your password">
+<header>
+    <nav>
+        <div>Intramurals SY 2025-2026</div>
+        <ul class="nav-links">
+            <li><a href="https://jgrospe2425.github.io/GH_ICT10_Q3_Seatwork2_Grospe_Jillian/">Sign Up</a></li>
+            <li><a href="https://jgrospe2425.github.io/GH_ICT10_Q3SkillsTestGrospe_Jillian/">Team Checker</a></li>
+            <li><a href="https://jgrospe2425.github.io/Players/">Players</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <input type="button" py-click="Username" value="Sign Up">
+<form>
+    <h1>Sign Up</h1>
 
-        <div id="output"></div>
-    </form>
-    <py-script src="main.py"></py-script>
+    <label>Username:</label>
+    <input type="text" id="user" placeholder="Please enter your username">
+
+    <label>Password:</label>
+    <input type="text" id="pass" placeholder="Please enter your password">
+
+    <input type="button" py-click="Username" value="Sign Up">
+
+    <div id="output"></div>
+</form>
+
+<py-script src="main.py"></py-script>
+
 </body>
 </html>
-
-
-
-
-
-
