@@ -90,30 +90,43 @@
     }
 
     nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-    }
+    width: 100%;
+    background-color: #fff0f6;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(201, 79, 124, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
-     .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #c94f7c;
+    font-size: 18px;
+}
 
-    .nav-links a {
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--deep-gold);
-            transition: 0.3s;
-        }
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    .nav-links a:hover {
-            color: var(--primary-pink);
-        }
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #b84d73;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e48aad;
+}
     
 </style>
 <body>
@@ -143,6 +156,7 @@
     <py-script src="main.py"></py-script>
 </body>
 </html>
+
 
 
 
